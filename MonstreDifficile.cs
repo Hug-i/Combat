@@ -6,10 +6,14 @@ namespace PetitJeu_1
 {
     class MonstreDifficile : MonstreFacile
     {
+        public MonstreFacileDifficile()
+        {
+
+        }
         public new int Attaque()
         {
-            De deMonstre= new De();
-            return deMonstre.LanceLeDe();
+            Attaque()
+
         }
     }
 }

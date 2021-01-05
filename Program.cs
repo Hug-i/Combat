@@ -7,7 +7,7 @@ namespace PetitJeu_1
     {
         static void Main(string[] args)
         {
-            int Points = 0;
+            List<MonstreFacile> monstres = new List<MonstreFacile>();
             Joueur hero = new Joueur();
 
             
@@ -16,11 +16,11 @@ namespace PetitJeu_1
             {
                 if (deMonstre.LanceLeDe() > 3)
                 {
-                    MonstreFacile monstre = new MonstreDifficile();
+                    monstres.Add (MonstreFacile monstre = new MonstreFacile());
                 }
                 else
                 {
-                    MonstreFacile monstre = new MonstreFacile();
+                    monstres.Add (MonstreFacile monstre = new MonstreFacile());
                 }
                 hero.Attaque(monstre);
                 
