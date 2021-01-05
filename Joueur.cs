@@ -17,7 +17,17 @@ namespace PetitJeu_1
         }
         public void Attaque (MonstreFacile monstre)
         {
-            monstre.Attaque();
+            
+            De deJoueur = new De();
+            De deMonstre = new De();
+
+            int scoreLancerJoueur = deJoueur.LanceLeDe();
+            int scoreLancerMonstre = deMonstre.LanceLeDe();
+
+            if (scoreLancerJoueur>=scoreLancerMonstre)
+                monstre.IsAlive = false;
+            else
+                monstre.Attaque(Joueur);
         }
         public void SubitDegats (int degats)
         {
